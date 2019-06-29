@@ -9,7 +9,7 @@ import './lib/mui/css/mui.min.css'
 
 //按需导入 Mint-ui 中组件
 import 'mint-ui/lib/style.css'
-import {Header} from 'mint-ui'
+import {Header} from 'mint-ui'  
 Vue.component(Header.name,Header)
 
 // 导入 app 根组件
