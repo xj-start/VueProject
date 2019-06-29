@@ -1,0 +1,8 @@
+{
+    "status":0,
+    "message":[
+        {"url":"1","img":"../../image/slide1.jpg"},
+        {"url":"2","img":"../../image/slide2.jpg"},
+        {"url":"3","img":"../../image/slide3.jpg"}
+    ]
+}
