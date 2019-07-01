@@ -21,9 +21,20 @@ Vue.component(SwipeItem.name,SwipeItem)
 // 1.3 导入自己的 router.js 路由模块
 import router from './router'
 
+//导入格式时间的插件
+import moment from 'moment'
+
+//定义全局过滤器
+Vue.filter('dataFormat',function (dataStr,pattern = "YYYY-MM-DD HH:mm:ss") {
+    return moment(dataStr).format(pattern)
+})
+
 // 2.1 导入 vue-resource  安装 vue-resource
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
+
+// 设置请求的根路径
+Vue.http.options.root = "http://localhost:8018"
 
 // 导入 app 根组件
 import app from './app.vue'
