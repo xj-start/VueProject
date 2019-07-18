@@ -53,7 +53,8 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 
 // 设置请求的根路径
-Vue.http.options.root = "http://localhost:8018"
+Vue.http.options.root = "http://192.168.0.185:8018"
+// Vue.http.options.root = "http://192.168.1.105:8018"
 // 全局设置 POST 时候表单的数据格式组织形式 application/x-www-form-urlencoded
 Vue.http.options.emulateJson = true
 

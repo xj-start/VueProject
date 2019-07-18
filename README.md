@@ -101,3 +101,9 @@
  2. import VuePreview from 'vue-preview'; Vue.use(VuePreview)
  3. <vue-preview :slides="slide1" @close="handleClose" class="thumbImg"></vue-preview>
  4. [ 具体使用说明请参考网址 ](https://github.com/LS1231/vue-preview#readme)
+
+ ## 商品列表 页面的基本结构并美化
+
+ ## 尝试在手机上 进行项目的预览和测试 
+ 1. 保证手机和电脑 在开发项目中 处于同一个WIFI(局域网)环境中 
+ 2. 打开package.json文件中，在dev脚本中，添加一个--host指令，把当前电脑的ID地址，设置为--host的指令值 

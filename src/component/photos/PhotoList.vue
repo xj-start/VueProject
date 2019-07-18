@@ -4,7 +4,7 @@
         <div id="slider" class="mui-slider">
 			<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" data-scroll="1">
 				<div class="mui-scroll" style="transform: translate3d(0px, 0px, 0px) translateZ(0px);">
-					<a :class="['mui-control-item',item.id ==0 ? 'mui-active':'']" v-for="item in cates" :key="item.id" @click="getPhoneListByCateId(item.id)">
+					<a :class="['mui-control-item',item.id ==0 ? 'mui-active':'']" v-for="item in cates" :key="item.id" @tap="getPhoneListByCateId(item.id)">
 						{{ item.title }}
 					</a>
 				</div>

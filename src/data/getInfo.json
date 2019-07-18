@@ -1,0 +1,14 @@
+{
+    "status":0,
+    "message":[
+        {
+            "id":1,
+            "title":"送福利,老婆凭身份证购买",
+            "add_time":"2019-07-17T18:32:50.000Z",
+            "goods_no":"SDK3498A2T3",
+            "stock_quantity":20,
+            "market_price":269,
+            "sell_price":199
+        }
+    ]
+}

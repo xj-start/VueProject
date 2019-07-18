@@ -70,7 +70,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
     .photoinfo-container{
         padding: 3px;
         h3{
@@ -90,8 +90,14 @@ export default {
         }
     }
     .thumbImg{
-        img{
-            vertical-align: middle;
+        padding: 5px;
+        figure[itemprop="associatedMedia"]{
+            display: inline-block;
+            margin: 0px;
+            margin-right: 10px;
+        }
+        img[alt*="picture"]{
+            width: 100px!important;
         }
     }
 </style>

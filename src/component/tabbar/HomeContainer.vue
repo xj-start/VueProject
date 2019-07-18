@@ -1,11 +1,7 @@
 <template>
   <div>
     <!-- 轮播图 -->
-    <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="(item,i) in lunbotuList" :key="i">
-        <img :src="item.img" alt>
-      </mt-swipe-item>
-    </mt-swipe>
+    <swiper :lunbotuList="lunbotuList" :isfull="true"></swiper>  
 
     <!-- 九宫格 到 六宫格的改造 -->
     <ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -22,10 +18,10 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/goodslist">
           <img src="../../image/ktv.png" alt="">
           <div class="mui-media-body">商品购买</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
@@ -51,6 +47,7 @@
 
 <script>
 import { Toast } from "mint-ui";
+import swiper from '../subcomponents/Swiper.vue'
 
 export default {
   data() {
@@ -74,31 +71,14 @@ export default {
         }
       });
     }
+  },
+  components: {
+    swiper
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.mint-swipe {
-  height: 240px;
-  .mint-swipe-item {
-    &:nth-child(1) {
-      background-color: #d9d9d9;
-    }
-    &:nth-child(2) {
-      background-color: #ddd;
-    }
-    &:nth-child(3) {
-      background-color: #999;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-  }
-}
-
 .mui-grid-view.mui-grid-9{
     background-color: #fff;
     img{

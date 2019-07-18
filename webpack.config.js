@@ -15,6 +15,8 @@ module.exports = {
     },
     devServer: {//配置DevServer 命令参数的第二种方式
         // --open --port 3000 --contentBase src --hot
+        host:'192.168.0.185',
+        //host: '192.168.1.105',
         open:true, //自动打开浏览器
         port:8018, //设置启动的运行端口
         contentBase:'src', //指定托管的根目录
