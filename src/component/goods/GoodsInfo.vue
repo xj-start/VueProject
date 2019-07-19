@@ -111,6 +111,15 @@ export default {
         addToShopCar(){
             //添加到购物车
             this.ballFlag = !this.ballFlag;
+            //{id:商品的id,count:商品的数量,price:商品的价格,seleted:true&false购物车开关}
+            var goodsinfo = {
+                id:this.id,
+                count:this.selectedCount,
+                price:this.goodsinfo.sell_price,
+                selected:true
+            }
+            //调用 store 中的 mutations 来将商品加入购物车
+            this.$store.commit("addToCar",goodsinfo)
         },
         beforeEnter(el){
             el.style.transform="translate(0,0)"
@@ -134,7 +143,7 @@ export default {
             .getBoundingClientRect();
             const xDist = badgePosition.left - ballPosition.left;
             const yDist = badgePosition.top - ballPosition.top;
-            console.log(xDist, yDist);
+            //console.log(xDist, yDist);
 
             el.style.transform=`translate(${xDist}px,${yDist}px)`;
             el.style.transition = "all 0.5s cubic-bezier(.4,-0.3,1,.68)";
@@ -146,7 +155,7 @@ export default {
         getSelectedCount(count){
             //当子组件把选中的数量 传递给父组件的时候 选中的值保存到 data上
             this.selectedCount = count
-            console.log("父组件拿到的数据为:"+count);
+            //console.log("父组件拿到的数据为:"+count);
         }
     },
     components:{

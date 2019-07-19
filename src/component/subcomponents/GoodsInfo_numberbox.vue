@@ -35,7 +35,7 @@ export default {
         'max':function(newVal,oldVal) {
             //使用 JS api 设置numbox 的最大值
             mui(".mui-numbox").numbox().setOption("max",newVal)
-        }
+        }  
     }
 }
 </script>
